@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- I am a brainchild of RAKE FOXX      -->
+<!-- No credits to anyone else.          -->
+<html>
+<head>
+  <title> RDJ Sound Manager </title>
+  <style>
+    tr{
+      border-collapse: collapse;
+    }
+    .rgt{
+      border-right: 1px solid #aa88aa;
+    }
+  </style>
+  <script type="text/javascript">
+    function setUp(){
+      var labelList = [ "1. Chao Engine",
+                        "2. Brick in wall",
+                        "3. Password crack",
+                        "4. Glass break"
+                      ];
+      var soundList = [ "Chaos.mp3",
+                        "Brick.mp3",
+                        "Password.mp3",
+                        "Glass.mp3"
+                      ];
+      var freqLabel = ["Demo sound"];
+      var freqSound = ["Glass.mp3"];
+      var string = "";
+        for(var i = 0; i < soundList.length; i++){
+          console.log(i);
+          string += '<tr>                                              ' + "\n";
+          string += ' <td>                                             ' + "\n";
+          string += '   &nbsp;' + labelList[i] + "\n";
+          string += ' </td>                                            ' + "\n";
+          string += ' <td style="text-align:right; margin-right: 5px " class="rgt">' + "\n";
+          string += '   <audio controls style="width:540px">           ' + "\n";
+          string += '     <source src="' + soundList[i] + '" type="audio/mpeg">' + "\n";
+          string += '   </audio>                                       ' + "\n";
+          string += ' </td>                                            ' + "\n";
+          if(i<freqSound.length){
+          string += ' <td>                                             ' + "\n";
+          string += '   &nbsp;' + freqLabel[i] + "\n";
+          string += ' </td>                                            ' + "\n";
+          string += ' <td style="text-align:right; margin:auto ">      ' + "\n";
+          string += '   <audio controls style="width:375px">                               ' + "\n";
+          string += '     <source src="' + freqSound[i] + '" type="audio/mpeg">' + "\n";
+          string += '   </audio>                                       ' + "\n";
+          string += ' </td>                                          ' + "\n";
+		  }
+          string += '</tr>                                             ' + "\n";
+        }
+        document.getElementById("frame").innerHTML = string;
+      }
+  </script>
+</head>
+<body onload="setUp()">
+  <p align="center" style="background-color:#FFD6AD; border:2px dashed brown; margin-top:5px; margin-bottom:5px">
+  <br>
+  <span style="font-family: Garamond; font-size: 30px; color:#552266; font-weight: bold" > Rdj Sound Manager </span><br>
+  <span style="font-size:15px; font-family: Courier; font-weight: bold">
+    by Rishabh Ranjan
+  </font>
+  <br><br>
+  </p>
+  <hr>
+  <table style="border: 2px solid #ddbbdd; width:100%; background-color: #ffccff">
+    <thead>
+    <tr style="background-color:#ff9955; font-weight:italics; size:20px; font-family: veranda">
+      <td style="width:60%; background-color:#ff9955; font-weight:italics; font-size:20px; font-family: Garamond" colspan="2">
+        <p align="center" style="margin: auto">Scene-wise sounds</p>
+      </td>
+      <td style="width:40%; background-color:#ff9955; font-weight:italics; font-size:20px; font-family: Garamond" colspan="2">
+        <p align="center" style="margin: auto">Frequent sounds</p>
+      </td>
+    </tr>
+    </thead>
+    <tbody id="frame" style="border: 5px solid black; width:100%">
+      <!--<audio controls>
+        <source src="Chaos.mp3" type="audio/mpeg">
+      </audio>-->
+    </tbody>
+  </table>
+  <hr>
+  <div style="background-color:#ffd6ad; text-align:center; width:100%">  This is just a demo. More sounds can be added easily.
+    <br> Contact <a href="mailto:mr.rishabh.ranjan@gmail.com">mr.rishabh.ranjan@gmail.com </a> before using.<br>
+    Copyrights reserved by RAKE FOXX of RADON PRODUCTIONS.
+  </div>
+</body>
+</html>
