@@ -1,4 +1,3 @@
 Random-Programs
 ===============
-
-Just an online storage for some of my programs. I'm a high schooler, by the way.
+I am a high school code lover. I just needed an online storage for some of my programs.
